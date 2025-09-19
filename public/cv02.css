@@ -1,0 +1,138 @@
+* {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+
+  /* variables */
+  --dark-green: #526d4f;
+  --light-green: #acb6a8;
+}
+
+h1 {
+  font-weight: 800;
+  color: var(--dark-green);
+}
+
+h2 {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+h3 {
+  font-weight: 600;
+  color: var(--dark-green);
+}
+
+h4 {
+  font-weight: 600;
+  font-style: italic;
+}
+
+header {
+  text-align: center;
+  background-color: white;
+  margin: 0;
+  padding: 0.1rem;
+}
+
+body {
+  background-image: url(img/still-life-graphic-design-studio.jpg);
+  background-size: 100%;
+  margin: 0;
+}
+
+#contact-card {
+  background-color: white;
+  display: flex;
+  margin: 5rem;
+  margin-inline: 10rem;
+  filter: drop-shadow(0 0 2rem #000000);
+  border-radius: 0.5rem;
+}
+
+#contact-text {
+  padding-left: 1rem;
+}
+
+#photo {
+  width: 20vw;
+  object-fit: contain;
+  align-self: center;
+  justify-self: flex-end;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+#experience {
+  background-color: white;
+  padding: 1rem;
+}
+#skills {
+  /* background-color: rgba(172, 182, 168, 0.95); */
+  background-color: rgba(82, 109, 79, 0.95);
+  color: white;
+  padding: 1rem;
+}
+
+.comp-skills {
+  display: flex;
+  gap: 0.5rem;
+  padding-inline: 0.5rem;
+  border-radius: 0.5rem;
+  /* background-color: var(--dark-green); */
+  background-color: var(--light-green);
+}
+.c-skill {
+  /* border-right: #acb6a8 solid 1pt; */
+  border-right: #526d4f solid 1pt;
+  padding-right: 0.5rem;
+}
+
+.skill-title {
+  /* border-top: #526d4f solid 2pt; */
+  border-top: #acb6a8 solid 2pt;
+  padding-top: 0.2rem;
+  font-weight: 800;
+  color: #acb6a8;
+}
+
+#others {
+  margin-top: 10rem;
+  background-color: var(--light-green);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+#c-skill-other {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#name {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+.cont-info-elem {
+  margin: 0.2rem;
+}
+
+.small-gap-title {
+  margin-bottom: 0.5rem;
+}
+#hobby-title {
+  color: var(--dark-green);
+  font-size: 1.2rem;
+  margin: 0;
+  border-bottom: #ffffff dashed 1.5pt;
+}
