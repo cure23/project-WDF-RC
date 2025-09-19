@@ -9,15 +9,31 @@ font-style: normal; */
 
 header {
   background-color: brown;
+  padding: 2%;
+  padding-bottom: 1%;
 }
 
 #title-box {
+  display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+#header-logo {
+  font-size: 3rem;
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0%;
 }
 
 li {
   list-style: none;
   display: inline-block;
+  padding-inline: 2%;
 }
 
 .header-text {
@@ -30,4 +46,26 @@ li {
 
 #navigation {
   font-size: 1.5rem;
+  text-align: center;
+  padding-top: 2%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+#profile-link {
+  padding-left: 20vw;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-link:hover {
+  color: chocolate;
 }
