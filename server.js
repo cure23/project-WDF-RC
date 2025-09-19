@@ -1,14 +1,22 @@
 const express = require("express");
 const sqlite3 = require("sqlite3");
+const { engine } = require("express-handlebars");
+
 const port = 8080;
 const app = express();
 
+// HANDLEBARS
+app.engine("handlebars", engine()); // initialize the engine to be handlebars
+app.set("view-engine", "handlebars"); // set handlebars as the view engine
+app.set("views", "./views"); // define the vievs directory to be ./views
+
+// DATABASE
 const dbFile = "my-project-db.sqlite3.db";
 db = new sqlite3.Database(dbFile);
 
 // creates table Person at startup
 db.run(
-  `CREATE TABLE Person (pid INTEGER PRIMARY KEY, fname TEXT NOT NULL, lname TEXT NOT NULL, age INTEGER, email TEXT)`,
+  `CREATE TABLE IF NOT EXISTS Person (pid INTEGER PRIMARY KEY, fname TEXT NOT NULL, lname TEXT NOT NULL, age INTEGER, email TEXT)`,
   function (error) {
     if (error) {
       // tests error: display error
@@ -33,7 +41,8 @@ db.run(
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
+  /* res.send("Hello World!"); */
+  res.render("home.handlebars");
 });
 
 app.get("/cv", (req, res) => {
