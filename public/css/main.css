@@ -1,0 +1,33 @@
+/* Hey Eloise Regular
+font-family: "hey-eloise", sans-serif;
+font-weight: 400;
+font-style: normal;
+Hey Eloise Watercolor
+font-family: "hey-eloise-watercolor", sans-serif;
+font-weight: 400;
+font-style: normal; */
+
+header {
+  background-color: brown;
+}
+
+#title-box {
+  flex-direction: row;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+.header-text {
+  color: antiquewhite;
+  text-decoration: none;
+  font-family: "hey-eloise", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#navigation {
+  font-size: 1.5rem;
+}
