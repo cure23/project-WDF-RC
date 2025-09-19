@@ -1,0 +1,458 @@
+* {
+  /* text-align: left; */
+  font-family: "Host Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+
+  /* variables */
+  --margin: 3rem;
+  --dark-green: #526d4f;
+  --light-green: #acb6a8;
+}
+
+body {
+  margin: 0%;
+}
+
+/* HEADER */
+
+header {
+  background-color: white;
+  text-align: center;
+}
+
+#logo {
+  color: var(--dark-green);
+  font-family: "Domine", serif;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 3rem;
+  display: inline-block;
+  padding: 0;
+  border-bottom: 4px solid var(--dark-green);
+  margin: 5px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
+  margin-bottom: 0;
+}
+
+li {
+  display: inline;
+  margin: 10px;
+}
+
+li:hover {
+  color: var(--light-green);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* MAIN */
+
+/* Big text home page */
+
+h1 {
+  font-size: 7rem;
+  font-weight: 800;
+  line-height: 100%;
+  display: inline;
+}
+
+#front-text {
+  margin: var(--margin);
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+
+  animation-name: front-text-animation;
+  animation-duration: 2s;
+  animation-delay: 0.1s;
+}
+
+/* name color animation */
+/* @keyframes text-color-animation {
+  from {
+    color: white;
+  }
+  to {
+    color: var(--dark-green);
+  }
+} */
+
+#name {
+  background-color: white;
+  margin-left: 0.2em;
+  margin-top: 1rem;
+  font-family: "Domine", serif;
+  color: var(--dark-green);
+
+  /* animation-name: text-color-animation;
+  animation-duration: 2s;
+  animation-delay: 0.1s;
+  animation-direction: normal; */
+}
+
+h3 {
+  font-size: 2rem;
+  margin-block: 10px;
+}
+
+@keyframes front-text-animation {
+  from {
+    transform: scale(2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Green section home-page */
+
+/* @keyframes green-color-animation {
+  from {
+    margin-right: 80%;
+  }
+  to {
+    margin-right: 35%;
+  }
+}
+
+@keyframes white-text-animation {
+  from {
+    color: rgba(255, 255, 255, 0);
+  }
+  to {
+    color: rgba(255, 255, 255, 1);
+  }
+} */
+
+/* the following animation is inspired by 'wipe-enter - Cool CCS Animations' https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/*/
+@keyframes roll-enter {
+  0% {
+    transform: scale(0.025, 0);
+    color: rgba(200, 200, 200, 0);
+  }
+  50% {
+    transform: scale(0.025, 1);
+    color: rgba(200, 200, 200, 0);
+  }
+}
+
+#dark-green {
+  /* animation-name: green-color-animation; */
+
+  background-color: var(--dark-green);
+  margin-right: 35%;
+}
+
+#green-part {
+  background-color: var(--light-green);
+  color: white;
+
+  animation-name: roll-enter;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+.white-text {
+  /* animation-name: white-text-animation; */
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 0.1s;
+  animation-direction: normal;
+  animation-fill-mode: both;
+
+  margin: var(--margin);
+  padding-bottom: var(--margin);
+}
+
+.white-title {
+  border-bottom: 2px solid white;
+}
+
+p {
+  margin-inline: var(--margin);
+}
+
+h2 {
+  padding-top: 2rem;
+  margin-bottom: 0px;
+  margin-left: var(--margin);
+}
+
+/* Top-projects section */
+/* #home-proj-section {
+  margin-inline: var(--margin);
+} */
+/* .home-proj-img {
+  padding-right: 1rem;
+  width: 25%;
+} */
+
+#home-proj-section {
+  display: grid;
+  grid-template-areas:
+    "project project project"
+    "button button button";
+  margin: var(--margin);
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.home-proj-img {
+  grid-area: project;
+  width: 100%;
+}
+
+.home-proj-img:hover {
+  transform: scale(1.02);
+}
+
+.more-button {
+  grid-area: button;
+  place-self: end end;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--dark-green);
+  color: white;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 5rem;
+  /* border-top: 2px solid rgba(200, 200, 200, 0.5); */
+  padding-bottom: 1%;
+}
+
+p {
+  margin-top: 0;
+}
+
+#copyright {
+  color: rgb(200, 200, 200);
+}
+
+.footer-img {
+  width: 2%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  margin-right: 5px;
+}
+
+/* Other Pages elements */
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.button {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  border: 2px solid var(--light-green);
+  /* opacity: 0.25; */
+  border-radius: 10px;
+  background-color: #7d927b;
+}
+
+.button:hover {
+  background-color: var(--dark-green);
+}
+
+.italic-font {
+  font-style: italic;
+}
+
+/* change headers size and top projects 3 to 2 */
+@media screen and (max-width: 880px) {
+  h2 {
+    font-size: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  #home-proj-section {
+    display: grid;
+    grid-template-areas:
+      "project project"
+      "project project"
+      "button button";
+  }
+}
+
+/* responsive home screen big-text  */
+@media screen and (max-width: 1170px) {
+  h1 {
+    font-size: 6rem;
+    font-weight: 700;
+  }
+
+  #front-text {
+    margin: var(--margin);
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+
+  #front-text {
+    margin: var(--margin);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  #front-text {
+    margin: var(--margin);
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  #front-text {
+    margin: 2rem;
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+/* responsive home screen green-section and top projects 2 to 1 */
+
+@media screen and (max-width: 700px) {
+  #dark-green {
+    margin-right: 15%;
+  }
+
+  #home-proj-section {
+    display: grid;
+    grid-template-areas:
+      "project"
+      "project"
+      "project"
+      "button";
+  }
+  .more-button {
+    grid-area: button;
+    place-self: end center;
+  }
+}
+
+* {
+  --margin: 3rem;
+}
+
+.form-text {
+  margin: 0px;
+  padding-right: 25%;
+}
+
+.form-elements {
+  margin-block: 10px;
+  text-align: left;
+}
+
+#contact-content {
+  margin-top: var(--margin);
+  margin-left: 50%;
+  animation-name: text-opacity-animation;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+}
+textarea {
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  background-color: rgba(200, 200, 200, 0.25);
+}
+
+#contact-me {
+  animation-name: contact-me-animation;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease;
+}
+
+@media screen and (max-width: 800px) {
+  #contact-content {
+    margin: var(--margin);
+  }
+  .form-text {
+    padding-right: 0;
+  }
+}
+
+@keyframes text-opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes contact-me-animation {
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: rotate(-1deg) scale(1.1);
+  }
+  55% {
+    transform: rotate(1deg) scale(1.1);
+  }
+  70% {
+    transform: rotate(-1deg) scale(1.1);
+  }
+  85% {
+    transform: rotate(1deg) scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

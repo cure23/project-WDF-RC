@@ -95,6 +95,16 @@ app.get("/listpersons", (req, res) => {
   });
 });
 
+// DEFINE THE /about ROUTE (MY CV)
+app.get("/about", (req, res) => {
+  res.render("mycv-02.handlebars");
+});
+
+// DEFINE THE /contact ROUTE (MY Contact)
+app.get("/contact", (req, res) => {
+  res.render("contact.handlebars");
+});
+
 app.listen(port, () => {
   console.log(`Server up and running on http://localhost:${port}...`);
 });
