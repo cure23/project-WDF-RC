@@ -8,7 +8,9 @@ font-weight: 400;
 font-style: normal; */
 
 header {
-  background-color: brown;
+  background-image: url(/img/gingham.png);
+  background-size: 100%;
+  margin: 0;
   padding: 2%;
   padding-bottom: 1%;
 }
@@ -33,7 +35,7 @@ header {
 li {
   list-style: none;
   display: inline-block;
-  padding-inline: 2%;
+  padding-inline: 5%;
 }
 
 .header-text {
@@ -45,9 +47,12 @@ li {
 }
 
 #navigation {
+  background-color: brown;
   font-size: 1.5rem;
   text-align: center;
-  padding-top: 2%;
+  margin-top: 2%;
+  margin-inline: 20%;
+  border-radius: 25px;
 }
 
 ul {
