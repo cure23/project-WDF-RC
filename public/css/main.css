@@ -5,7 +5,30 @@ font-style: normal;
 Hey Eloise Watercolor
 font-family: "hey-eloise-watercolor", sans-serif;
 font-weight: 400;
+
 font-style: normal; */
+
+* {
+  /* colour variables */
+  --maroon: #962b20;
+  --orange: #ffb987;
+  --white: #faebd7;
+
+  font-family: "pill-gothic-900mg", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--white);
+  margin: 0;
+}
+
+main {
+  margin: 2%;
+}
+
+/* HEADER */
 
 header {
   background-image: url(/img/gingham.png);
@@ -47,7 +70,7 @@ li {
 }
 
 .header-text {
-  color: antiquewhite;
+  color: var(--white);
   text-decoration: none;
   font-family: "hey-eloise", sans-serif;
   font-weight: 400;
@@ -55,7 +78,7 @@ li {
 }
 
 #navigation {
-  background-color: brown;
+  background-color: var(--maroon);
   font-size: 1.5rem;
   text-align: center;
   margin-top: 2%;
@@ -80,5 +103,23 @@ ul {
 }
 
 .nav-link:hover {
-  color: chocolate;
+  color: var(--orange);
+}
+
+/* BODY */
+
+h1 {
+  font-size: 3rem;
+  font-family: "hey-eloise", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: var(--maroon);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--orange);
+  height: 150px;
+  margin-top: 30%;
 }
