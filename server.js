@@ -17,10 +17,11 @@ const port = 8080;
 const app = express();
 
 //--- DEFINE MIDDLEWARES
-app.use(express.static("public"));
+app.use(express.static("public")); // search unknown routes in the "public" directory
 app.engine("handlebars", engine()); // initialize the engine to be handlebars
 app.set("view-engine", "handlebars"); // set handlebars as the view engine
 app.set("views", "./views"); // define the vievs directory to be ./views
+app.use(express.urlencoded({ extended: true })); // fro processing forms sent using "post" method
 
 //--- CONNECT TO DATABASE
 const dbFile = "my-project-db.sqlite3.db";
@@ -281,12 +282,6 @@ app.get("/contact", (req, res) => {
   res.render("contact.handlebars");
 });
 
-// DEFINE THE /projects ROUTE (MY projects)
-app.get("/projects", (req, res) => {
-  model = { projects };
-  res.render("projects.handlebars", model);
-});
-
 // DEFINE THE /ingredients ROUTE
 app.get("/ingredients", (req, res) => {
   db.all("SELECT * FROM Ingredient", (error, listOfIngredients) => {
@@ -309,6 +304,21 @@ app.get("/recipes", (req, res) => {
       res.render("recipes.handlebars", model);
     }
   });
+});
+
+// DEFINE THE /log-in ROUTE
+app.get("/login", (req, res) => {
+  res.render("login.handlebars");
+});
+app.post("/login", (req, res) => {
+  const { un, pw } = req.body;
+
+  // Verification
+  if (!un || !pw) {
+    return res.status(400).send("Username and password are required.");
+  }
+  // Sending Response
+  res.send(`Recieved Username - ${un}, Password - ${pw}`);
 });
 
 //--- LISTEN TO INCOMING REQUESTS
