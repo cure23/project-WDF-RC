@@ -1,0 +1,11 @@
+<div id="principal">
+  <h1>The Recipe Journal's Ingredients</h1>
+  <div>
+    <ul>
+      {{#each recipes}}
+        <li>{{title}} - {{servings}} - {{uid}} - {{desc}}</li>
+        <img src="{{img}}" alt="{{img}}" class="smallimage" />
+      {{/each}}
+    </ul>
+  </div>
+</div>

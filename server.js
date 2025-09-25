@@ -287,6 +287,30 @@ app.get("/projects", (req, res) => {
   res.render("projects.handlebars", model);
 });
 
+// DEFINE THE /ingredients ROUTE
+app.get("/ingredients", (req, res) => {
+  db.all("SELECT * FROM Ingredient", (error, listOfIngredients) => {
+    if (error) {
+      console.log("ERROR: ", error);
+    } else {
+      model = { ingredients: listOfIngredients };
+      res.render("ingredients.handlebars", model);
+    }
+  });
+});
+
+// DEFINE THE /ingredients ROUTE
+app.get("/recipes", (req, res) => {
+  db.all("SELECT * FROM Recipe", (error, listOfRecipes) => {
+    if (error) {
+      console.log("ERROR: ", error);
+    } else {
+      model = { recipes: listOfRecipes };
+      res.render("recipes.handlebars", model);
+    }
+  });
+});
+
 //--- LISTEN TO INCOMING REQUESTS
 app.listen(port, () => {
   //initTableIngredients(db);

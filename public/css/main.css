@@ -63,7 +63,7 @@ header {
   height: 5rem;
 }
 
-li {
+.nav-li {
   list-style: none;
   display: inline-block;
   padding-inline: 5%;
