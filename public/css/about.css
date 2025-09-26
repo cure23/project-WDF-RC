@@ -7,22 +7,6 @@
   --white: #ffffff;
 }
 
-h2 {
-  font-weight: 300;
-  margin-top: 0;
-  margin-bottom: 4rem;
-}
-
-h3 {
-  font-weight: 600;
-  color: var(--maroon);
-}
-
-h4 {
-  font-weight: 600;
-  font-style: italic;
-}
-
 .contact-card {
   background-color: var(--white);
   display: flex;
@@ -63,6 +47,7 @@ h4 {
 #experience {
   background-color: var(--beige);
   padding: 1rem;
+  padding-bottom: 0;
 }
 #skills {
   background-color: var(--maroon);
@@ -93,8 +78,6 @@ h4 {
 
 #others {
   margin-top: 10rem;
-  background-color: var(--orange);
-  border-radius: 0.5rem;
   padding: 1rem;
 }
 
@@ -119,10 +102,4 @@ h4 {
 
 .small-gap-title {
   margin-bottom: 0.5rem;
-}
-#hobby-title {
-  color: var(--maroon);
-  font-size: 1.2rem;
-  margin: 0;
-  border-bottom: var(--maroon) dashed 1.5pt;
 }

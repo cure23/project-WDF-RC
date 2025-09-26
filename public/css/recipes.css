@@ -9,7 +9,7 @@
   --white: #ffffff;
 }
 
-/* ---- RECIPES ---- */
+/* ---- /recipes ---- */
 
 .recipes-container {
   display: grid;
@@ -24,13 +24,6 @@
   object-fit: cover;
   padding-top: 1rem;
   border-radius: 1rem;
-}
-
-.recipes-link {
-  border-top: var(--beige) 1rem dotted;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  background-color: var(--white);
 }
 
 .recipes-title {

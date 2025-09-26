@@ -1,3 +1,5 @@
+/*  MAIN STYLE + HOME PAGE STYLING */
+
 /* Hey Eloise Regular
 font-family: "hey-eloise", sans-serif;
 font-weight: 400;
@@ -7,6 +9,8 @@ font-family: "hey-eloise-watercolor", sans-serif;
 font-weight: 400;
 
 font-style: normal; */
+
+/* ---- MAIN ---- */
 
 * {
   /* colour variables */
@@ -98,8 +102,8 @@ ul {
   padding: 0;
 }
 
-#profile-link {
-  padding-left: 20vw;
+#profile-text-link {
+  padding-right: 0.5rem;
 }
 
 .profile-icon {
@@ -123,6 +127,22 @@ h1 {
   color: var(--maroon);
 }
 
+h2 {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+
+h3 {
+  font-weight: 600;
+  color: var(--maroon);
+}
+
+h4 {
+  font-weight: 600;
+  font-style: italic;
+}
+
 /* ____The following 6 lines of code come from: https://css-tricks.com/css-borders-using-masks/ _____ */
 .scallop-box {
   -webkit-mask: var(--mask);
@@ -131,10 +151,62 @@ h1 {
     radial-gradient(25px, #000 98%, #0000) 50%/46.25px 50px repeat space;
 }
 
+.notes-box {
+  border-top: var(--beige) 1rem dotted;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--white);
+}
+
 /* FOOTER */
 
 footer {
   background-color: var(--orange);
   height: 150px;
-  margin-top: 30%;
+  margin-top: 2rem;
+}
+
+/* ---- /home ---- */
+
+#home-img {
+  width: 20%;
+  aspect-ratio: 1 / 2;
+  object-fit: cover;
+}
+
+.home {
+  display: flex;
+}
+
+.home-text {
+  padding-left: 1rem;
+}
+
+.home-div {
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.home-about {
+  background-color: var(--orange);
+}
+
+.home-more {
+  border-top: var(--beige) 1rem dotted;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--white);
+}
+
+.section-title {
+  color: var(--maroon);
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: 1rem;
+  padding-bottom: 2pt;
+  border-bottom: var(--maroon) solid 1.5pt;
+}
+
+.home-anout-title {
+  border-bottom: none;
 }
