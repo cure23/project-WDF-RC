@@ -1,17 +1,9 @@
 * {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-
-  /* variables */
-  --dark-green: #526d4f;
-  --light-green: #acb6a8;
-}
-
-h1 {
-  font-weight: 800;
-  color: var(--dark-green);
+  /* colour variables */
+  --black: #16130e;
+  --maroon: #962b20;
+  --orange: #ffcd87;
+  --white: #faebd7;
 }
 
 h2 {
@@ -22,25 +14,12 @@ h2 {
 
 h3 {
   font-weight: 600;
-  color: var(--dark-green);
+  color: var(--maroon);
 }
 
 h4 {
   font-weight: 600;
   font-style: italic;
-}
-
-header {
-  text-align: center;
-  background-color: white;
-  margin: 0;
-  padding: 0.1rem;
-}
-
-body {
-  /* background-image: url(/img/still-life-graphic-design-studio.jpg);
-  background-size: 100%; */
-  margin: 0;
 }
 
 #contact-card {
@@ -89,21 +68,21 @@ body {
 }
 .c-skill {
   /* border-right: #acb6a8 solid 1pt; */
-  border-right: #526d4f solid 1pt;
+  border-right: var(--maroon) solid 1pt;
   padding-right: 0.5rem;
 }
 
 .skill-title {
   /* border-top: #526d4f solid 2pt; */
-  border-top: #acb6a8 solid 2pt;
+  border-top: var(--orange) solid 2pt;
   padding-top: 0.2rem;
   font-weight: 800;
-  color: #acb6a8;
+  color: var(--orange);
 }
 
 #others {
   margin-top: 10rem;
-  background-color: var(--light-green);
+  background-color: var(--orange);
   border-radius: 0.5rem;
   padding: 1rem;
 }
@@ -131,7 +110,7 @@ body {
   margin-bottom: 0.5rem;
 }
 #hobby-title {
-  color: var(--dark-green);
+  color: var(--maroon);
   font-size: 1.2rem;
   margin: 0;
   border-bottom: #ffffff dashed 1.5pt;
