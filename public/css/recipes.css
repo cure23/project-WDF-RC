@@ -5,7 +5,8 @@
   --black: #16130e;
   --maroon: #962b20;
   --orange: #ffcd87;
-  --white: #faebd7;
+  --beige: #faebd7;
+  --white: #ffffff;
 }
 
 /* ---- RECIPES ---- */
@@ -15,10 +16,6 @@
   grid-template-columns: repeat(3, 1fr);
   margin: var(--margin);
   gap: 2rem;
-
-  animation-name: bounce-in;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
 }
 
 .recipes-list-img {
@@ -26,16 +23,21 @@
   aspect-ratio: 1 / 1; /* force a square */
   object-fit: cover;
   padding-top: 1rem;
+  border-radius: 1rem;
 }
 
 .recipes-link {
-  border-radius: 2rem;
-  background-color: var(--orange);
+  border-top: var(--beige) 1rem dotted;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: var(--white);
 }
 
 .recipes-title {
-  font-weight: 800;
-  font-size: 1.4rem;
+  font-family: "hey-eloise", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2rem;
   color: var(--maroon);
   margin-top: 1.5rem;
   border-top: var(--maroon) 2pt solid;

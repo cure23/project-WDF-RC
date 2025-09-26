@@ -3,7 +3,8 @@
   --black: #16130e;
   --maroon: #962b20;
   --orange: #ffcd87;
-  --white: #faebd7;
+  --beige: #faebd7;
+  --white: #ffffff;
 }
 
 h2 {
@@ -23,7 +24,7 @@ h4 {
 }
 
 .contact-card {
-  background-color: var(--orange);
+  background-color: var(--white);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -51,7 +52,7 @@ h4 {
   border-radius: 50%;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border: var(--white) 8pt solid;
+  border: var(--beige) 8pt solid;
 }
 
 #content {
@@ -60,7 +61,7 @@ h4 {
 }
 
 #experience {
-  background-color: var(--white);
+  background-color: var(--beige);
   padding: 1rem;
 }
 #skills {
