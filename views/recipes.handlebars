@@ -1,11 +1,16 @@
 <div id="principal">
   <h1>The Recipes</h1>
   <div>
-    <ul>
+    <section class="recipes-container">
       {{#each recipes}}
-        <li>{{title}} - {{servings}} - {{uid}} - {{desc}}</li>
-        <img src="{{img}}" alt="{{img}}" class="smallimage" />
+        <a href="/{{title}}" class="recipes-link">
+          <figure>
+            <img class="recipes-list-img" src={{img}} alt="food image" />
+            <figcaption class="recipes-title">{{title}}</figcaption>
+            <figcaption class="recipes-user">A recipe by {{uid}}</figcaption>
+          </figure>
+        </a>
       {{/each}}
-    </ul>
+    </section>
   </div>
 </div>

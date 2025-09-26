@@ -10,13 +10,15 @@ font-style: normal; */
 
 * {
   /* colour variables */
+  --black: #16130e;
   --maroon: #962b20;
-  --orange: #ffb987;
+  --orange: #ffcd87;
   --white: #faebd7;
 
   font-family: "pill-gothic-900mg", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: var(--black);
 }
 
 body {
@@ -26,6 +28,10 @@ body {
 
 main {
   margin: 2%;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* HEADER */
@@ -71,7 +77,6 @@ header {
 
 .header-text {
   color: var(--white);
-  text-decoration: none;
   font-family: "hey-eloise", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -122,8 +127,4 @@ footer {
   background-color: var(--orange);
   height: 150px;
   margin-top: 30%;
-}
-
-.smallimage {
-  width: 100px;
 }

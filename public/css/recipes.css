@@ -1,0 +1,48 @@
+/*  RECIPES PAGE + SINGLE RECIPE PAGE STYLING */
+
+* {
+  /* colour variables */
+  --black: #16130e;
+  --maroon: #962b20;
+  --orange: #ffcd87;
+  --white: #faebd7;
+}
+
+/* ---- RECIPES ---- */
+
+.recipes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: var(--margin);
+  gap: 2rem;
+
+  animation-name: bounce-in;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.recipes-list-img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* force a square */
+  object-fit: cover;
+  padding-top: 1rem;
+}
+
+.recipes-link {
+  border-radius: 20px;
+  background-color: var(--orange);
+}
+
+.recipes-title {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--maroon);
+  margin-top: 1.5rem;
+  border-top: var(--maroon) 2pt solid;
+}
+
+.recipes-user {
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}

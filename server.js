@@ -19,7 +19,7 @@ const app = express();
 //--- DEFINE MIDDLEWARES
 app.use(express.static("public")); // search unknown routes in the "public" directory
 app.engine("handlebars", engine()); // initialize the engine to be handlebars
-app.set("view-engine", "handlebars"); // set handlebars as the view engine
+app.set("view engine", "handlebars"); // set handlebars as the view engine
 app.set("views", "./views"); // define the vievs directory to be ./views
 app.use(express.urlencoded({ extended: true })); // fro processing forms sent using "post" method
 
@@ -254,9 +254,9 @@ app.get("/", (req, res) => {
   res.render("home.handlebars"); // the landing page information
 });
 
-app.get("/cv", (req, res) => {
+/* app.get("/cv", (req, res) => {
   res.sendFile(__dirname + "/views/mycv-02.html"); //internal var def by node and it corresponds to where folder your project is
-});
+}); */
 
 /* Could do the same for any pic/file requested 
 
@@ -274,7 +274,7 @@ and it gives access to every incoming request to your public folder (imgs, style
 
 // DEFINE THE /about ROUTE (MY CV)
 app.get("/about", (req, res) => {
-  res.render("mycv-02.handlebars");
+  res.render("about.handlebars");
 });
 
 // DEFINE THE /contact ROUTE (MY Contact)
