@@ -18,7 +18,7 @@ font-style: normal; */
   font-family: "pill-gothic-900mg", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--black);
+  /* color: var(--black); */
 }
 
 body {
@@ -32,6 +32,7 @@ main {
 
 a {
   text-decoration: none;
+  color: var(--black);
 }
 
 /* HEADER */
@@ -119,6 +120,14 @@ h1 {
   font-weight: 900;
   font-style: normal;
   color: var(--maroon);
+}
+
+/* ____The following 6 lines of code come from: https://css-tricks.com/css-borders-using-masks/ _____ */
+.scallop-box {
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  --mask: linear-gradient(0deg, #0000 50px, #000 0) 0 25px,
+    radial-gradient(25px, #000 98%, #0000) 50%/46.25px 50px repeat space;
 }
 
 /* FOOTER */

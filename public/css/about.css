@@ -22,24 +22,36 @@ h4 {
   font-style: italic;
 }
 
-#contact-card {
-  background-color: white;
+.contact-card {
+  background-color: var(--orange);
   display: flex;
-  margin: 5rem;
-  margin-inline: 10rem;
-  filter: drop-shadow(0 0 2rem #000000);
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  /* margin: 5rem; */
+  /*  margin-inline: 10rem; */
+  margin-bottom: 3rem;
   border-radius: 0.5rem;
 }
 
 #contact-text {
+  position: absolute;
+  left: 0%;
+  transform: translateX(-0%);
   padding-left: 1rem;
 }
 
-#photo {
-  width: 20vw;
+#about-pic {
+  width: 15%;
+  margin: 2rem;
   object-fit: contain;
   align-self: center;
   justify-self: flex-end;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: var(--white) 8pt solid;
 }
 
 #content {
@@ -48,13 +60,12 @@ h4 {
 }
 
 #experience {
-  background-color: white;
+  background-color: var(--white);
   padding: 1rem;
 }
 #skills {
-  /* background-color: rgba(172, 182, 168, 0.95); */
-  background-color: rgba(82, 109, 79, 0.95);
-  color: white;
+  background-color: var(--maroon);
+  color: var(--white);
   padding: 1rem;
 }
 
@@ -63,11 +74,10 @@ h4 {
   gap: 0.5rem;
   padding-inline: 0.5rem;
   border-radius: 0.5rem;
-  /* background-color: var(--dark-green); */
-  background-color: var(--light-green);
+  /* background-color: var(--orange); */
+  background-color: rgba(255, 205, 135, 0.5);
 }
 .c-skill {
-  /* border-right: #acb6a8 solid 1pt; */
   border-right: var(--maroon) solid 1pt;
   padding-right: 0.5rem;
 }
@@ -113,5 +123,5 @@ h4 {
   color: var(--maroon);
   font-size: 1.2rem;
   margin: 0;
-  border-bottom: #ffffff dashed 1.5pt;
+  border-bottom: var(--maroon) dashed 1.5pt;
 }
